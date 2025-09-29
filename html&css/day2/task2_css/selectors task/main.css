@@ -1,0 +1,40 @@
+/* make all <p> red */
+p {
+    color: red;
+}
+
+/* select p and div */
+p, div {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+
+#myDiv > p.mainClass {
+    color: rgb(36, 36, 230);
+}
+
+/* p inside dev */
+div p {
+    color: rgb(25, 235, 43);
+}
+
+/* input with type 'text' and class='myClass' */
+input[type='text'].myClass {
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+div ~ span {
+    border: 2px dotted #ccc;
+}
+
+p.myClass {
+    background-color: blueviolet;
+}
+
+#myDiv {
+    background-color: bisque;
+}
+

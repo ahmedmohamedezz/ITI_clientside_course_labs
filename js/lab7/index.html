@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab 7</title>
+  </head>
+  <body>
+    <script>
+      // 1- Write a function that greets a user, using a default parameter for the name.
+      function greet(name = "user") {
+        console.log(`Hi, ${name}`);
+      }
+      // greet()
+      // greet("ezz")
+
+      // 2- Write a function that calculates the total price with a default tax rate parameter.
+      function calTax(tot, rate = 0.1) {
+        // def: 10% rate
+        console.log(Math.round(tot + tot * rate, 3));
+      }
+
+      // calTax(100)
+      // calTax(100, 0.2)
+
+      // 3- Write a function that creates a user object, using a default role parameter.
+      function createUser(name, role = "engineer") {
+        user = {
+          name: name,
+          role: role,
+        };
+        return user;
+      }
+      // createUser("ahmed")
+      // createUser("ezz", "python dev")
+
+      // 4- Write a function that multiplies any number of arguments using the rest operator.
+      function mul(...args) {
+        return args.reduce((acc, val) => (acc *= val), 1);
+      }
+      // console.log(mul(1, 2, 3))
+      // console.log(mul(1, 2, 3, 4))
+
+      // 5- Write a function that multiplies the first argument by the sum of all the rest using the rest operator.
+      function mulBySum(first, ...rest) {
+        return first * rest.reduce((acc, val) => (acc += val), 0);
+      }
+      // console.log(mulBySum(10, 2, 2));
+      // console.log(mulBySum(10, 2, 2, 2));
+
+      // 6- Write a function that takes a variable number of strings and returns them as a single array using the rest operator.
+      function makeArray(...strs) {
+        return strs;
+      }
+      // console.log(makeArray('a', 'b'))
+      // console.log(makeArray('a', 'b', 'c'))
+
+      // 7- Create a new array by combining two arrays using the spread operator.
+      let arr1 = [1, 2];
+      let arr2 = [3, 4];
+      let bigArr = [...arr1, ...arr2];
+      // console.log(bigArr);
+
+      // 8- Copy an array using the spread operator.
+      let arr3 = [1, 2, 3];
+      let arr4 = [...arr3];
+      // console.log(arr4)
+
+      // 9- Merge two objects into one using the spread operator.
+      let obj1 = {
+        name: "ahmed ezz",
+        age: 23,
+      };
+      let obj2 = {
+        career: "sw engineering",
+      };
+
+      let allInfo = { ...obj1, ...obj2 };
+      // console.log(allInfo);
+
+      // 10- Update a property in an object using the spread operator to create a new object.
+      const obj3 = {
+        name: "john doe",
+        age: 25,
+      };
+      const updatedObj = { ...obj3, age: 32 };
+      // console.log(updatedObj);
+
+      // 11- Destructure an array to get the first and second elements into variables.
+      const lst = [1, 2, 3, 4, 5];
+      let [x, y] = lst;
+      // console.log(x, y);
+
+      // 12- Destructure an array to get the first element and the rest into another array.
+      let [first, ...otherArray] = lst;
+      // console.log(first)
+      // console.log(otherArray);
+
+      // 13- Destructure an object to extract two properties into variables.
+      const obj4 = {
+        title: "Article",
+        url: "url-to-article",
+      };
+      const { title, url } = obj4;
+      // console.log(title, url);
+
+      // 14- Destructure an object and rename the extracted properties.
+      const { title: articleTitle, url: articleURL } = obj4;
+      // console.log(articleTitle, articleURL);
+
+      // 15- Write a function that takes an object as a parameter and uses destructuring in the parameter list to extract specific properties.
+      function extract(obj, params) {
+        for (key of params) {
+          // don't treat key as 'key' it's. get it's value [key]
+          const { [key]: data } = obj;
+          console.log(data);
+        }
+      }
+
+      // extract(obj4, ["url"]);
+      // extract(obj4, ["title", "url"]);
+    </script>
+  </body>
+</html>

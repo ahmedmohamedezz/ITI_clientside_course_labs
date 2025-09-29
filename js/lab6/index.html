@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>lab 6</title>
+  </head>
+  <body>
+    <h2>Table with sort icons</h2>
+
+    <table id="emp">
+      <tr>
+        <th>
+          <div class="sort">
+            name
+            <span data-field="name" data-type="string" data-sort="asc"
+              >&#8593;</span
+            >
+            <span data-field="name" data-type="string" data-sort="desc"
+              >&#8595;</span
+            >
+          </div>
+        </th>
+
+        <th>
+          <div class="sort" data-field="position" data-type="string">
+            position
+            <span data-field="position" data-type="string" data-sort="asc"
+              >&#8593;</span
+            >
+            <span data-field="position" data-type="string" data-sort="desc"
+              >&#8595;</span
+            >
+          </div>
+        </th>
+
+        <th>
+          <div class="sort" data-field="office" data-type="string">
+            office
+            <span data-field="office" data-type="string" data-sort="asc"
+              >&#8593;</span
+            >
+            <span data-field="office" data-type="string" data-sort="desc"
+              >&#8595;</span
+            >
+          </div>
+        </th>
+
+        <th>
+          <div class="sort" data-field="age" data-type="number">
+            age
+            <span data-field="age" data-type="number" data-sort="asc"
+              >&#8593;</span
+            >
+            <span data-field="age" data-type="number" data-sort="desc"
+              >&#8595;</span
+            >
+          </div>
+        </th>
+      </tr>
+    </table>
+
+     <h2>Stack Simulation</h2>
+
+    <div id="controls">
+      <input type="text" id="val" placeholder="Value" />
+      <button onclick="push()">Push</button>
+      <button onclick="pop()">Pop</button>
+    </div>
+
+    <div id="container"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

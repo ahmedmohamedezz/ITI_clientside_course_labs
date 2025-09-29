@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Map</title>
+  </head>
+  <body>
+    <header>
+      <h1>Image Map Example</h1>
+    </header>
+    
+    <section class="image-map">
+      <img src="./images/google.png" usemap="#image-map" />
+
+      <map name="image-map">
+        <area
+          target="_blank"
+          alt="Google"
+          title="Google"
+          href="https://www.google.com/"
+          coords="95,118,2,0"
+          shape="rect"
+        />
+        <area
+          target="_blank"
+          alt="W3Schools"
+          title="W3Schools"
+          href="https://www.w3schools.com/"
+          coords="99,24,235,105"
+          shape="rect"
+        />
+        <area
+          target="_blank"
+          alt="Leetcode"
+          title="Leetcode"
+          href="https://leetcode.com/"
+          coords="386,127,238,2"
+          shape="rect"
+        />
+      </map>
+    </section>
+  </body>
+</html>

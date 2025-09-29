@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  /* not all are of the same size */
+  grid-template-rows: auto auto auto auto;
+}
+
+.section {
+  padding: 20px;
+}
+
+/*  ------------------------------------ first row */
+.avatar,
+.main-info {
+  background: orange;
+  color: #fff;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.avatar {
+  /* take 1 col in 1 row */
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar .profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar .profile-pic img {
+    width: 100%;
+    height: 100%;
+    scale: 1.1;
+}
+
+.main-info {
+/* second column in 1st row */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*  ------------------------------------ second row */
+.contact {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.contact i {
+    margin-right: 10px;
+    color: orange;
+}
+
+.achievements {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.achievements h3 {
+    color: orange;
+}
+
+/*  ------------------------------------ third row */
+.languages {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.languages .part p {
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 10px;
+    background-color: gray;
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 70%;
+}
+
+.progress#en::after  {
+    background-color: orange;
+}
+
+.progress#gr::after  {
+    background-color: rgba(95, 95, 245, 0.808);
+}
+
+.progress#sp::after  {
+    background-color: rgb(221, 76, 76);
+}
+
+.education {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+/*  ------------------------------------ forth row */
+.skills {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+.skills ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skills .section1 ul li {
+    border: 3px solid black;
+    font-size: 12px;
+    padding: 20px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.skills .section1 ul li::after {
+    position: absolute;
+    content: "";
+    background-color: gray;
+}
+
+.skills .section1 ul li#one,
+.skills .section1 ul li#four {
+    border: 5px solid orange;
+}
+
+.skills .section1 ul li#two {
+    border: 5px solid  rgba(95, 95, 245, 0.808);
+}
+
+.skills .section1 ul li#three {
+    border: 5px solid rgb(221, 76, 76);
+    padding: 20px 10px;
+}
+
+.skills .section1 ul li#four {
+    padding: 20px 17px;
+}
+
+.skills .section2 {
+    margin-bottom: 20px;
+}
+
+.skills .section2 h2 {
+    margin-top: 10px;
+}
+
+.skills .section2 li {
+    display: flex;
+    align-items: center;
+}
+
+.skills .section2 i {
+    margin-right: 5px;
+    font-size: 2em;
+}
+
+.skills .section2 li i#facebook {
+    color: rgb(31, 31, 175);
+}
+
+.skills .section2 li i#google {
+    color:rgb(190, 15, 15);
+}
+
+.work {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}

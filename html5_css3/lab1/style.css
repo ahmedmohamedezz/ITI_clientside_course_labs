@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.row {
+  padding: 20px 0;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  gap: 15px;
+}
+
+.card {
+  background-color: #fff;
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card .upper {
+  min-height: 150px;
+  width: 100%;
+}
+
+.card .lower {
+  padding: 20px;
+  direction: rtl;
+}
+
+.card .lower h2 {
+  color: #000;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.card .lower p {
+  color: gray;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.card .lower button {
+  color: #fff;
+  background-color: rgb(53, 114, 246);
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.card .lower div {
+  color: #fff;
+  background-color: lightgreen;
+  border: 3px solid green;
+  padding: 15px 5px;
+  font-size: 1.1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* animations */
+
+.card .lower h2,
+.card button {
+  transition: 0.3s ease;
+}
+
+.card:hover .lower h2 {
+  color: green;
+}
+
+.card:hover button {
+  transform: scale(1.05);
+}
+
+#c1 .upper {
+  background: radial-gradient(
+    circle at 30% 55%,
+    rgb(170, 244, 170),
+    rgb(42, 189, 42)
+  );
+}
+
+#c1:hover {
+  transform: scale(0.95);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#c2 .upper {
+  background: linear-gradient(90deg, rgb(53, 53, 230), rgb(95, 95, 236));
+}
+
+#c2 .lower div {
+  transition: 0.3s ease;
+}
+#c2:hover .lower div {
+  transform: skew(6deg, 3deg);
+}
+
+#c3 .upper {
+  transition: 0.3s ease;
+}
+
+#c3 .upper {
+  background-image: url(https://media.istockphoto.com/id/2162818079/vector/world-map.jpg?s=612x612&w=0&k=20&c=3FcexEm-8rdMgw1vRT_ABWKD3dUY34Q95Zi9du3E2Wo=);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#c3:hover .upper {
+  transform: rotate(3deg) translateY(-3px);
+}

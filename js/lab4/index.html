@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>lab 4</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .slider {
+        height: 100vh;
+        background-image: url(./imgs/1.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+      }
+
+      .slider .buttons {
+        width: 100%;
+        position: absolute;
+        bottom: 25px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .slider .buttons span:not(:first-of-type) {
+        margin-left: 30px;
+      }
+
+      .slider .buttons span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        cursor: pointer;
+      }
+
+      div:not(:first-of-type) {
+        margin-top: 10px;
+      }
+
+      #name-div {
+        border: 1px solid hotpink;
+        border-radius: 10px;
+        padding: 5px 10px;
+        color: hotpink;
+      }
+      #email-div {
+        border: 1px solid lightblue;
+        border-radius: 10px;
+        padding: 5px 10px;
+        color: lightblue;
+      }
+      #city-div {
+        border: 1px solid goldenrod;
+        border-radius: 10px;
+        padding: 5px 10px;
+        color: goldenrod;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .odd {
+        background-color: #eee;
+      }
+      .even {
+        background-color: rgb(245, 218, 150);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="buttons">
+        <span onclick="getPrev()">
+          <i class="fa-solid fa-left-long"></i>
+        </span>
+        <span onclick="start()">
+          <i class="fa-solid fa-play"></i>
+        </span>
+        <span onclick="stop()">
+          <i class="fa-solid fa-pause"></i>
+        </span>
+        <span onclick="getNext()">
+          <i class="fa-solid fa-right-long"></i>
+        </span>
+      </div>
+    </div>
+    <div class="target-div" id="div-2">
+      <h3>create element using js</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+        reiciendis!
+      </p>
+    </div>
+    <div id="name-div">name:</div>
+    <div id="email-div">email:</div>
+    <div id="city-div">city:</div>
+    <div>
+      <p id="my-p">my p</p>
+    </div>
+    <div id="wrapper">
+      <p id="first">First</p>
+      <p id="second">Second</p>
+    </div>
+    <form>
+      <input type="text" id="name" placeholder="name" />
+      <input type="email" name="user-email" id="email" placeholder="email" />
+      <input type="text" id="city" placeholder="city" />
+
+      <select name="user-country" id="my-select">
+        <option value="us">United States</option>
+        <option value="EG">Egypt</option>
+        <option value="uk">United Kingdom</option>
+      </select>
+
+      <button id="reflect">reflect values</button>
+    </form>
+    <script src="./lab.js"></script>
+  </body>
+</html>

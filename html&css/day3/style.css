@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.nav {
+    background-color: #333333;
+    font-size: 0;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.nav-link {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 10px;
+    height: 45px;
+}
+
+.nav-link:hover {
+    background-color: #4caf50;
+}
+
+
+.nav-link a {
+    color: #fff;
+}
+
+p {
+    font-size: 2em;
+}
+
+
+.z-img {
+    position: relative;
+}
+
+.z-img img {
+    width: 100%;
+}
+
+.z-img .desc {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+
+.z-img .desc h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    background-color: #d6d6d6;
+}
+
+.box {
+    width: 30%;
+    min-width: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.box .img-container {
+    height: 60%;
+}
+
+.box .img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box .description {
+    padding: 20px;
+}
+
+.box .description h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.box .description p {
+    font-size: 1.5em;
+}
+
+
+.drop-down {
+    min-height: 50vh;
+    padding: 20px;
+}
+
+.references {
+    display: inline-block;
+    position: relative;
+}
+
+.references button {
+    background-color: #dd0032;
+    color: #fff;
+    font-size: 1.7em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.references div {
+    display: none;
+    position: absolute;
+}
+
+.references ul {
+    background-color: #2a2a2a;
+    border: 4px solid #dd0032;
+    border-radius: 5px;
+}
+
+.references ul li {
+    padding: 10px;
+}
+
+.references ul li:hover {
+    background-color: #dd0032;
+}
+
+.references ul li a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.references:hover div {
+    display: block;
+}

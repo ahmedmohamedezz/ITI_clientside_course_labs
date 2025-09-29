@@ -1,0 +1,8 @@
+p, div, span {
+    font-family: 'Lucida Calligraphy';
+}
+
+div h1 {
+    width: fit-content;
+    margin: auto;
+}
