@@ -20,19 +20,15 @@ Here’s how the repo is organized:
 ITI_clientside_course_labs/  
 
 ├── html&css/ # Basic HTML & CSS labs  
-  ├── lab1    
-      ├── lab1 files  
+  ├── lab1    ---> lab1 files  
     
-  ├── lab x    
-      ├── lab's files
+  ├── lab x   ---> lab's files
     
 ├── html5_css3/ # Labs using HTML5 and advanced CSS3 features  
-  ├── lab    
-      ├── lab's files
+  ├── lab    ---> lab's files
 
 ├── js/ # JavaScript exercises and projects   
-  ├── lab    
-      ├── lab's files
+  ├── lab    ---> lab's files
 
 └── README.md # (this file)  
 
